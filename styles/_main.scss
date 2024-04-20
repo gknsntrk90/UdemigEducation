@@ -1,0 +1,46 @@
+section{
+    padding: 70px 17% 60px; //*yukarıdan 70 mecvut olanından 17% sağdan soldan 60px*/
+}
+ //! Home */
+ .home{
+    position: relative;
+    height: 100vh; //*açılır pencerenin boyutu kadar
+    width: 100%;
+    //arka planda renk geçişi olacak ve to left yapacağız soldan sağ geçiş rengi
+    background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+    ),
+    url(/Images/group.jpeg);
+    background-size: cover;
+    background-position: bottom center; //*alttan ortalayıp ortadan da sabitlicek*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    //! Home'un içerisinde ki home-text'in içerisinde ki h5
+    .home-text h5{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px; //*aşağıdan kendini uzaklaştır*/
+        text-transform: uppercase; //*büyük harf yap*/
+        letter-spacing: 5px; //*harf arası boşluklar*/
+        color: var(--main-color);
+    }
+    //! home'un içeirsine ki home-text'in içerisinde ki h1
+    .home-text h1 {
+    font-size: var(--h1-font);
+    font-weight: 900;
+    line-height: 1.2; //*aralarınız biraz sıkılaştıralım*/
+    margin-top: 20px; //* biraz uzaklaştırma yapıyorz yukarıdan*/
+    }
+    //! home'un içeirsinde ki home-text'in içerisinde ki p
+    .home-text p{
+        font-size: var(--p-font);
+        font-weight: 500;
+        line-height: 30px;
+        color: #ffffffab;
+        margin-top: 10px;
+        margin-bottom: 35px;
+    }
+}

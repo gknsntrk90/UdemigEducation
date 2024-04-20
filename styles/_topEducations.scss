@@ -1,0 +1,73 @@
+.center-text{
+    text-align: center;
+    //!center-text içinde ki h2
+    h2{
+        font-size: var(--h2-font);
+        font-weight: 800;
+    }
+}
+
+.top-educations-content{
+    display: grid;
+    //*repeat ile birbirini tekrar etsin auto-fit ile tam doldursun minmax ile miinmum 250px olsun harici otomatik olsun auto*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 3rem; //*aralarını açıyoruz
+    margin-top: 5rem;
+}
+.box{
+    position: relative;
+    margin: 20px 0;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover; //*resim bozulmalarını düzeltiyoruz
+        border-radius: 10px;
+        filter: brightness(70%); //*parlaklıkla oynuyoruz resimler üzerinde
+        transition: all .3s cubic-bezier(0.499,0.05 ,0.55,0.95); //*üzerime geldiğimizde işlem görüyourz
+        display: block;
+        &:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+    }
+    h3{
+        position: absolute; //*üzerinden kay ama ne terafa olduğunu belirteceğiz
+        left: 25px;
+        bottom: 85px;
+        font-size: 18px;
+        font-weight: 500;
+        //! h3 içinde ki icon
+        i{
+            color: var(--main-color);
+            margin-right: 10px; //*icon ile p arasında mesafe açıyoruz sağ doğru
+        }
+    }
+    h4{
+        position: absolute;
+        left: 25px;
+        bottom: 55px;
+        font-size: 18px;
+        font-weight: 500;
+        i{
+            color: var(--main-color);
+            margin-right: 10px; //*icon ile p arasında mesafe açıyoruz sağ doğru
+        }
+    }
+    h5{
+        position: absolute;
+        left: 25px;
+        bottom: 25px;
+        font-size: 18px;
+        font-weight: 500;
+        i{
+            color: var(--main-color);
+            margin-right: 20px; //*icon ile p arasında mesafe açıyoruz sağ doğru
+        }
+    }
+}
+
+.center-btn{
+    text-align: center;
+    margin-top: 4rem;
+}

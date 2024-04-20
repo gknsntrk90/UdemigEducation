@@ -1,0 +1,38 @@
+.about-us{
+    // background-color: aqua;
+    //*repeat tekrar et(2,1fr) 2 tane tekrar et ve 1fr defa şekilde tamamnı kapla
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; //*aynı hizayada ortalıyoruz*/
+    gap: 9rem; //*aralarınız açıyoruz*/
+    //! about-us içerisinde ki .about-us-img div içinde ki img
+    .about-us-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    }
+    .about-us-text{
+        //!about-us-text içinde ki h5 , h2 , p
+        h5{
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--main-color);
+            text-transform: uppercase; //*her birini büyük harf
+            letter-spacing: 6px; //*harflar arasında  genişleme
+            margin-bottom: 20px; //*aşağıdan uzaklaştır yani h2'den
+        }
+        h2{
+            font-size: var(--h2-font);
+            font-weight: 800;
+            line-height: 1.2; //*satır yüksekliği*/
+            margin-bottom: 25px; //* aşağıdan uzaklaştır yani p'den
+        }
+        p{
+            font-size: var(--p-font);
+            font-weight: 500;
+            line-height: 30px;
+            color: #ffffffab;
+            margin-bottom: 35px; //*buttonan 35px lik uzaklaştıralım
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.educations-content{
+    display: grid;
+    //*auto-fit tamamen olabildiğince doldur ekranı
+    //*minmax(150px,auto) 150px aşağısına düşmesin fotolar çıkabildiği kadar çıksın
+    grid-template-columns: repeat(auto-fit,minmax(150px,auto));
+    align-items: center; //*yatay olarak hizalıyoruz*/
+    text-align: center; //*tamamen ortalamış olacağız*/
+    gap: 3rem; //*aralarına genişlik boşluk veriyoruz*/
+    //! educations-content içinde ki h4
+    h4{
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .5s ease;
+        &:hover{
+            color: var(--main-color);
+        }
+    }
+}
+.row-img{
+    overflow: hidden; //*taşan resimleri gizliyoruz*/
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    //! row-img içinde ki img
+    img{
+        width: 100%;
+        display: block;
+        transition: transform .7s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}

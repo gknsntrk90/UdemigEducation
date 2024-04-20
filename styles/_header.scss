@@ -1,0 +1,63 @@
+//? HEAEDER */
+header{
+    position: fixed;
+    top: 0;
+    //*header her zaman üstte kalıp bizi takip etmesi için kullanıyoruz
+    z-index: 1000;
+    width: 100%;
+    background-color: transparent;
+    padding: 27px 17px; //*27px yukarıdan aşağıdan 17px sağdan soldan
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s ease; //*her biri için transition veriyoruz hoverda işimize yarıcak*/
+        //!Header içinde ki logoya geçiyoruz
+    .logo{
+        font-size: 33px;
+        color: var(--text-color);
+        font-weight: bold;
+        //! header içinde ki logo içinde ki span
+        span{
+            color: var(--main-color);
+        }
+    }
+    //! Navbar
+    .navbar{
+        display: flex;
+        //! navbar içinde ki a
+        a{
+            color: var(--text-color);
+            font-size: var(--p-font);
+            font-weight: bold;
+            margin: 15px 22px; //*yukıardan aşağı 15 sağdan soldan 22 aralarını açıyoruz
+            transition:  all .5s ease;
+            //! & işaret hangisi kapsayıcıysa onun hover'ı oluyor burada a'nın
+            &:hover{
+                color: var(--main-color);
+            }
+        }
+    }
+    //! header-right
+    .header-right{
+        display: flex;
+        align-items: center;
+        //! header-right kısmının içinde ki a etiketleri yani iconlarımız
+        //*birinci a etiketinin font boyunu farklı yapmak için first-Child kullancağız çünkü tüm a etiketlerine aynı işlemi yaptık*/
+        a:first-child{
+            font-size: var(--p-font);
+            margin-right: 25px; //* ile sağ kısımdan biraz uzaklaştırıyoruz iconlardan*/
+        }
+        a{
+            font-size: 20px; //*her birine 20px büyüklük ver*/
+            color: var(--text-color);
+            margin-right: 18px;
+            margin-left: 5px;
+            transition: all .5s ease; //*sayesinde hover verdiğimizde sarı gölge vereceğiz mouse üzerine geldiğimizde iconlarında */
+            &:hover{
+                color: var(--main-color);
+                //* translateX yatay translateY dikey
+                transform: translateY(-3px); //* iconların üzerine mouse gelince hafif yukarı hareket edecekler */
+            }
+        }
+    }
+}
