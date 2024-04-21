@@ -1,0 +1,59 @@
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    //! contact içinde ki img
+    img{
+        max-width: 100%;
+        height: auto;       
+    }
+    //! contact içinde ki img img altındaki,
+    .contact-us-form{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        label{
+            margin-bottom: 20px; //*aşağıdan 20px uzaklaş
+        }
+    }
+}
+.contact-us-form input, button{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-us-form button{
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 15px;
+    transition: background-color .3s;
+    &:hover{
+        background-color: #a48032;
+        color: black;
+    }
+}
+
+
+
+
+
+
+//! MEDIA YAPIMI
+@media (min-width:768px){
+    .contact-us{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; //*başlangıç noktalarını sola yaslıyor
+    }
+    .contact-us img, .contact-us-form {
+        width: 48%;
+    }
+    .contact-us img{
+        margin-right: 10px; //* büyük ekranda resmi biraz uzaklaştıyoruz sağ tarafta ki inputlardan
+    }
+}

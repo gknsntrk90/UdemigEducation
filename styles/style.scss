@@ -15,6 +15,8 @@
 @import "educationsinfo";
 @import "about-us";
 @import "topEducations";
+@import "contact";
+@import "footer";
 
 
 //* GOOGLE FONT IMPORT*/
@@ -54,5 +56,36 @@ body{
         border: 2px solid var(--text-color);
         background-color: transparent;
         color: var(--text-color);
+    }
+}
+
+
+
+// RESPONSİVE TASARIM
+@media (max-width:1120px){
+    .navbar li{
+        display: none;
+    }
+    .home{
+        .home-text{
+            h5{
+                font-size: 2rem;
+            }
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+@media (max-width:1000px){
+    .header-right a{ //*ekranın sağ üstündeki iconları ve followu yok ediyoruz
+        display: none;
+    }
+    .header-right a:first-child{
+        display: block; //*follow yazısını tutmak istiyoruz
     }
 }

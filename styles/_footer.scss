@@ -1,0 +1,51 @@
+.footer{
+    display: grid;
+    //*repeat(auto-fill doldurabildiğin kadar doldur bu kısmı ve minmax minimum 200px olsun yukarı kısmı auto
+    grid-template-columns: repeat(auto-fill,minmax(200px,auto));
+    gap: 2rem; //*aralarını açıyoruz
+    //!footer içerisinde ki footer-box
+    .footer-box{
+        display: flex;
+        flex-direction: column; //*alt alta al
+        margin-left: 10px;
+        //!footer-box içinde ki h3
+        h3{
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        a{
+            color: #979797;
+            margin-bottom: .8rem;
+            transition: all .5s ease;
+            &:hover{
+                transform: translateX(-10px);
+                color: var(--text-color);
+            }
+        }
+    }
+}
+.social a{
+    display: inline-flex; //*hem satır içi kalsın hem esneklik yapsın girdler çalışsın diye
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    background-color: #202020;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+    transition: transform .6s;
+    &:hover{
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        transform:  translateX(-4px);
+    }
+}
+.copyright{
+    text-align: center;
+    padding: 20px;
+    color: #979797;
+    font-size: 15px;
+}
